@@ -86,7 +86,8 @@ systemctl start catalogue &>> $LOGFILE
 
 VALIDATE $? "Starting catalogue"
 
-cp 91636/Desktop/New folder/My folder/Shell-Roboshop/Mongo.repo /etc/yum.repos.d/Mongo.repo
+cp 91636/Desktop/New folder/My folder/Shell-Roboshop/catalogue.service /etc/systemd/catalogue.service
+
 
 VALIDATE $? "copying mongodb repo"
 
