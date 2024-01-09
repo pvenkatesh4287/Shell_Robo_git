@@ -86,14 +86,14 @@ systemctl start catalogue &>> $LOGFILE
 
 VALIDATE $? "Starting catalogue"
 
-cp 91636/Desktop/New folder/My folder/Shell-Roboshop/catalogue.service /etc/systemd/catalogue.service
-
+cp /home/centos/Shell-Roboshop/catalogue.service /etc/systemd/system/catalogue.service &>> $LOGFILE
 
 VALIDATE $? "copying mongodb repo"
 
 dnf install mongodb-org-shell -y &>> $LOGFILE
 
 VALIDATE $? "Installing MongoDB client"
+
 
 mongo --host $MONGDB_HOST </app/schema/catalogue.js &>> $LOGFILE
 
